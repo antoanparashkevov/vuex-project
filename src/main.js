@@ -17,6 +17,13 @@ const store = createStore({
   getters:{
     counter(state){
       return state.counter
+    },
+    normalizedCounter(_,getters){
+      let finalCounter = getters.counter;
+      if(finalCounter > 100){
+        finalCounter = 100
+      }
+      return finalCounter
     }
   }
 })

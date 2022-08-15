@@ -1,6 +1,7 @@
 <template>
   <base-container title="Vuex">
     <h3>{{counter}}</h3>
+    <h3>{{normalizedCounter}}</h3>
     <button @click='increase'>Increase</button>
   </base-container>
 </template>
@@ -15,6 +16,9 @@ export default {
   computed:{
     counter(){
       return this.$store.getters.counter
+    },
+    normalizedCounter(){
+      return this.$store.getters.normalizedCounter
     }
   },
   methods:{
