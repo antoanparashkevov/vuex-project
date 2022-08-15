@@ -13,6 +13,11 @@ const store = createStore({
     addOne(state,payload){
       state.counter  = state.counter + payload.value
     }
+  },
+  getters:{
+    counter(state){
+      return state.counter
+    }
   }
 })
 
