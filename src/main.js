@@ -25,6 +25,13 @@ const store = createStore({
       }
       return finalCounter
     }
+  },
+  actions:{
+    addOne(context,payload){
+      setTimeout(function(){
+        context.commit('addOne',payload)
+      },2000)
+    }
   }
 })
 
