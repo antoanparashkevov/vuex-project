@@ -20,7 +20,7 @@ export default {
   methods:{
     increase(){
       // this.$store.state.counter++
-      this.$store.commit('addOne')
+      this.$store.commit('addOne',{value:10})
     }
   }
 };
