@@ -1,7 +1,7 @@
 <template>
   <base-container title="Vuex">
-    <h3>{{$store.state.counter}}</h3>
-    <button>Increase</button>
+    <h3>{{counter}}</h3>
+    <button @click='increase'>Increase</button>
   </base-container>
 </template>
 
@@ -12,6 +12,16 @@ export default {
   components: {
     BaseContainer,
   },
+  computed:{
+    counter(){
+      return this.$store.state.counter
+    }
+  },
+  methods:{
+    increase(){
+      this.$store.state.counter++
+    }
+  }
 };
 </script>
 
